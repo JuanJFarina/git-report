@@ -31,10 +31,10 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/elc/git-report"
-documentation = "https://github.com/elc/git-report"
-repository = "https://github.com/elc/git-report"
-changelog = "https://github.com/ELC/git-report/blob/master/CHANGELOG.md"
+homepage = "https://github.com/JuanJFarina/git-report"
+documentation = "https://github.com/JuanJFarina/git-report"
+repository = "https://github.com/JuanJFarina/git-report"
+changelog = "https://github.com/JuanJFarina/git-report/blob/master/CHANGELOG.md"
 
 [project.scripts]
 git-report = "git_report.__main__:app"
