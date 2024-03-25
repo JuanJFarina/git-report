@@ -1,23 +1,25 @@
 import logging
+from typing import Optional
 
 import typer
 from typing_extensions import Annotated
 
 from . import __version__
-from .git_report import run
+from .entrypoint import run
+from .strategy.strategy import Strategy
 
 app = typer.Typer(add_completion=False)
 
 
 @app.callback(invoke_without_command=True)
 def main(
-    since_last_merge: Annotated[
-        bool,
-        typer.Option("--last-merge", "-lm", help="Get git report since last merge"),
-    ] = True,
+    strategy: Annotated[
+        Strategy,
+        typer.Option("--strategy", "-s", help="Get git report since last merge"),
+    ] = Strategy.FROM_DATE,
     since_n_days: Annotated[
-        str, typer.Option("--since", "-s", help="Get git report since n days")
-    ] = "",
+        Optional[str], typer.Option("--since", "-s", help="Get git report since n days")
+    ] = None,
     version: Annotated[
         bool, typer.Option("--version", "-V", help="Shows the version of git-report")
     ] = False,
@@ -31,11 +33,6 @@ def main(
     """Returns a report with all commits authors, amount of commits, percentage of total
     , and also number of files changed, lines added and lines deleted"""
 
-    since: str = "-1"
-
-    if since_n_days:
-        since = since_n_days
-
     if version:
         typer.echo(__version__)
         raise typer.Exit
@@ -46,8 +43,11 @@ def main(
     if extra_verbose:
         logging.basicConfig(level=logging.DEBUG)
 
-    if since_last_merge:
-        run(since)
+    if since_n_days and strategy is not Strategy.FROM_DATE:
+        error_message = "--since is only allowed with --strategy FROM_DATE"
+        raise ValueError(error_message)
+
+    run(strategy, since_n_days)
 
     raise typer.Exit
 
