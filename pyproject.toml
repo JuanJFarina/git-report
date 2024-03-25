@@ -64,7 +64,7 @@ readme = { file = ["README.md"], content-type = "text/markdown" }
 match = "(main|develop)"
 
 [tool.semantic_release]
-commit_message = "chore(release): bump version and update changelog [skip ci]"
+commit_message = "chore(release): bump version and update changelog"
 version_source = "tag"
 version_variables = ["git_report/__init__.py:__version__"]
 
