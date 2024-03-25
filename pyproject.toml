@@ -66,7 +66,7 @@ match = "(main|develop)"
 [tool.semantic_release]
 commit_message = "chore(release): bump version and update changelog [skip ci]"
 version_source = "tag"
-version_variables = ["git-report/__init__.py:__version__"]
+version_variables = ["git_report/__init__.py:__version__"]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
