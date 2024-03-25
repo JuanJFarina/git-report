@@ -4,15 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-typer = "*"
-typing-extensions = "*"
+typer = "==0.9.0"
+typing-extensions = "==4.10.0"
 
 [dev-packages]
-black = "*"
-pytest = "*"
-pytest-cov = "*"
-hypothesis = "*"
-pre-commit = "*"
+pytest = "==8.1.1"
+pytest-cov = "==4.1.0"
+hypothesis = "==6.99.6"
+pre-commit = "==3.6.2"
 
 [scripts]
 build = "python -m build"
