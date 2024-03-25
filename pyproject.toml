@@ -44,7 +44,7 @@ git-report = "git_report.__main__:app"
 #########################
 
 [tool.setuptools.package-data]
-git-report = ["py.typed", "*.md"]
+"*" = ["py.typed", "*.md"]
 
 [tool.setuptools.dynamic]
 version = { attr = "git-report.__version__" }

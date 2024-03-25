@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(config): code formatting ([`59358ee`](https://github.com/JuanJFarina/git-report/commit/59358ee6f16a3d4dc00a1e25b1bd3b8e9f790bda))
+
+* fix(cicd): add deployment pipeline ([`a9366c4`](https://github.com/JuanJFarina/git-report/commit/a9366c4f3cbd62f8556c4af6945edbea98c5ce20))
+
 * fix(config): update semantic version configuration ([`9884e60`](https://github.com/JuanJFarina/git-report/commit/9884e6003c95c30d6f6972bf338295d40d42b06a))
 
 * fix(cicd): update triggers for cicd ([`619462a`](https://github.com/JuanJFarina/git-report/commit/619462a1e85ceb9907a2f824eced2011cc514952))
