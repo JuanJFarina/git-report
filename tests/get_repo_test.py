@@ -12,4 +12,4 @@ def folder() -> Generator[Path, None, None]:
 
 
 def dummy_test() -> None:
-    pass
+    ...
