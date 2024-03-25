@@ -11,5 +11,4 @@ def folder() -> Generator[Path, None, None]:
         yield Path(directory_name)
 
 
-def dummy_test() -> None:
-    ...
+def dummy_test() -> None: ...
