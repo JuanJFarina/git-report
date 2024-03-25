@@ -17,7 +17,7 @@ def main(
     ] = True,
     since_n_days: Annotated[
         str, typer.Option("--since", "-s", help="Get git report since n days")
-    ] = "",
+    ] = "-1",
     version: Annotated[
         bool, typer.Option("--version", "-V", help="Shows the version of git-report")
     ] = False,
@@ -31,11 +31,6 @@ def main(
     """Returns a report with all commits authors, amount of commits, percentage of total
     , and also number of files changed, lines added and lines deleted"""
 
-    since: str = "-1"
-
-    if since_n_days:
-        since = since_n_days
-
     if version:
         typer.echo(__version__)
         raise typer.Exit
@@ -47,7 +42,7 @@ def main(
         logging.basicConfig(level=logging.DEBUG)
 
     if since_last_merge:
-        run(since)
+        run(since_n_days)
 
     raise typer.Exit
 
