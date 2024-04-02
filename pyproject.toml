@@ -20,13 +20,10 @@ classifiers = [
     "Programming Language :: Python",
     "License :: OSI Approved :: MIT License",
     "Intended Audience :: Developers",
-    "Framework :: Hypothesis",
     "Framework :: Pytest",
     "Environment :: Console",
     "Natural Language :: English",
     "Operating System :: OS Independent",
-    "Topic :: Software Development :: Quality Assurance",
-    "Topic :: Software Development :: Testing",
     "Topic :: Software Development :: Version Control :: Git",
     "Typing :: Typed",
 ]
@@ -38,7 +35,7 @@ repository = "https://github.com/JuanJFarina/git-stats-report"
 changelog = "https://github.com/JuanJFarina/git-stats-report/blob/master/CHANGELOG.md"
 
 [project.scripts]
-git_report = "git_report.__main__:app"
+git_stats_report = "git_stats_report.__main__:app"
 
 #########################
 # Setuptools
@@ -48,7 +45,7 @@ git_report = "git_report.__main__:app"
 "*" = ["py.typed", "*.md"]
 
 [tool.setuptools.dynamic]
-version = { attr = "git_report.__version__" }
+version = { attr = "git_stats_report.__version__" }
 readme = { file = ["README.md"], content-type = "text/markdown" }
 
 #########################
@@ -67,7 +64,7 @@ match = "(main|develop)"
 [tool.semantic_release]
 commit_message = "chore(release): bump version and update changelog"
 version_source = "tag"
-version_variables = ["git_report/__init__.py:__version__"]
+version_variables = ["git_stats_report/__init__.py:__version__"]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"

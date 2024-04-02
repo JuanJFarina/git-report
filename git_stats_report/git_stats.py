@@ -19,7 +19,7 @@ class GitStatsRawOutput(TypedDict):
 
 
 def get_git_stats(since: datetime) -> GitStatsRawOutput:
-    command: str = f"git-stats --raw --authors --since {since}"
+    command: str = f"npx git-stats --raw --authors --since {since}"
     return cast(GitStatsRawOutput, json.loads(run_command(command)))
 
 
