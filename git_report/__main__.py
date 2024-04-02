@@ -21,7 +21,8 @@ def main(
         Optional[str], typer.Option("--since", "-s", help="Get git report since n days")
     ] = None,
     version: Annotated[
-        bool, typer.Option("--version", "-V", help="Shows the version of git-report")
+        bool,
+        typer.Option("--version", "-V", help="Shows the version of git-stats-report"),
     ] = False,
     verbose: Annotated[
         bool, typer.Option("--verbose", "-v", help="Print INFO logging statements")

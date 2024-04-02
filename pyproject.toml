@@ -10,6 +10,7 @@ build-backend = "setuptools.build_meta"
 name = "git_report"
 authors = [
     { name = "Juan José Farina", email = "juanjosefarina.jjf@gmail.com" },
+    { name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com" },
 ]
 license = { text = "MIT" }
 requires-python = ">=3.8"
@@ -31,10 +32,10 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/JuanJFarina/git-report"
-documentation = "https://github.com/JuanJFarina/git-report"
-repository = "https://github.com/JuanJFarina/git-report"
-changelog = "https://github.com/JuanJFarina/git-report/blob/master/CHANGELOG.md"
+homepage = "https://github.com/JuanJFarina/git-stats-report"
+documentation = "https://github.com/JuanJFarina/git-stats-report"
+repository = "https://github.com/JuanJFarina/git-stats-report"
+changelog = "https://github.com/JuanJFarina/git-stats-report/blob/master/CHANGELOG.md"
 
 [project.scripts]
 git_report = "git_report.__main__:app"
