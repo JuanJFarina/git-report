@@ -7,7 +7,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "git-report"
+name = "git_report"
 authors = [
     { name = "Juan José Farina", email = "juanjosefarina.jjf@gmail.com" },
 ]
@@ -37,17 +37,17 @@ repository = "https://github.com/JuanJFarina/git-report"
 changelog = "https://github.com/JuanJFarina/git-report/blob/master/CHANGELOG.md"
 
 [project.scripts]
-git-report = "git_report.__main__:app"
+git_report = "git_report.__main__:app"
 
 #########################
 # Setuptools
 #########################
 
 [tool.setuptools.package-data]
-git-report = ["py.typed", "*.md"]
+"*" = ["py.typed", "*.md"]
 
 [tool.setuptools.dynamic]
-version = { attr = "git-report.__version__" }
+version = { attr = "git_report.__version__" }
 readme = { file = ["README.md"], content-type = "text/markdown" }
 
 #########################
@@ -64,9 +64,9 @@ readme = { file = ["README.md"], content-type = "text/markdown" }
 match = "(main|develop)"
 
 [tool.semantic_release]
-commit_message = "chore(release): bump version and update changelog [skip ci]"
+commit_message = "chore(release): bump version and update changelog"
 version_source = "tag"
-version_variables = ["git-report/__init__.py:__version__"]
+version_variables = ["git_report/__init__.py:__version__"]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
