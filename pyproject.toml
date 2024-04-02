@@ -7,7 +7,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "git_report"
+name = "git-stats-report"
 authors = [
     { name = "Juan José Farina", email = "juanjosefarina.jjf@gmail.com" },
     { name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com" },
