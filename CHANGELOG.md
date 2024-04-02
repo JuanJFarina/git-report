@@ -2,6 +2,13 @@
 
 
 
+## v0.1.1 (2024-04-02)
+
+### Fix
+
+* fix(code): fix npx and no author issue ([`8cb5eba`](https://github.com/JuanJFarina/git-stats-report/commit/8cb5ebae429be2f02ae38f8ed3f4258efbfc72f2))
+
+
 ## v0.1.0 (2024-04-02)
 
 ### Feature
