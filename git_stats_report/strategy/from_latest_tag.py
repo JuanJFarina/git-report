@@ -1,6 +1,6 @@
 from typing import Any
 
-from git_report.utils import run_command
+from git_stats_report.utils import run_command
 
 
 def get_latest_tag() -> str:

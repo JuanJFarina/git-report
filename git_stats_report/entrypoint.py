@@ -12,6 +12,8 @@ def run(strategy: Strategy, since: Optional[str]) -> None:
     total_commits = get_total_commits(git_stats)
 
     for author in git_stats["authors"]:
+        if not author["value"]:
+            continue
         author_info = get_author_info(author, since_datetime)
         percentage_of_total = (author["value"] * 100) / total_commits
         print(
