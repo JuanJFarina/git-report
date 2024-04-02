@@ -45,4 +45,4 @@ def get_author_info(author: AuthorStats, since: datetime) -> str:
             lines_added += int(added)
         if added[-1] in NUM_CHARS:
             lines_deleted += int(deleted)
-    return f"\n* {files_changed} Files Changed, {lines_added} (+) Lines Added, {lines_deleted} (-) Lines Deleted"  # pylint: disable=line-too-long
+    return f"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n\n"  # pylint: disable=line-too-long
