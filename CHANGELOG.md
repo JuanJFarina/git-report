@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(config): put correct package name ([`a70799c`](https://github.com/JuanJFarina/git-stats-report/commit/a70799cf50c84359fcb7ca8b53d8dad1c2d08760))
+
 * fix(code): change repo name ([`573432c`](https://github.com/JuanJFarina/git-stats-report/commit/573432c6330b99a5b853b76cd56799a2e56f1e55))
 
 * fix(pipelines): persist credentials in both ([`5e3f203`](https://github.com/JuanJFarina/git-stats-report/commit/5e3f2037f972b0a6eff51b3abd2c3e4f921d27db))
