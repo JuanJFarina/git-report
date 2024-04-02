@@ -143,7 +143,7 @@ jobs:
       #     git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
       #     pipx install .
       #     pipx install python-semantic-release==8.3.0
-      #     git-report -vv -t "$(semantic-release -v version --print)"
+      #     git-stats-report -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@3dfc5567390f6fa9267c0ee9c251e4c8c3f18949 # v2.2.3
