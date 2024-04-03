@@ -2,6 +2,13 @@
 
 
 
+## v0.2.1 (2024-04-03)
+
+### Fix
+
+* fix(code): multiple prints ([`81f797e`](https://github.com/JuanJFarina/git-stats-report/commit/81f797e3dfab3f3d25e6dc9a93ac9eb64ea6392e))
+
+
 ## v0.2.0 (2024-04-03)
 
 ### Feature

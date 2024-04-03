@@ -11,16 +11,15 @@ def run(strategy: Strategy, since: Optional[str], *, raw_format: bool) -> None:
     git_stats = get_git_stats(since_datetime)
     total_commits = get_total_commits(git_stats)
 
+    output: str = ""
+
     for author in git_stats["authors"]:
         if not author["value"]:
             continue
         author_info = get_author_info(author, since_datetime)
         percentage_of_total = (author["value"] * 100) / total_commits
-        output = (
-            f'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n',
-        )  # pylint: disable=line-too-long
+        tmp_output = f'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n'  # pylint: disable=line-too-long
         if raw_format:
-            output = (
-                rf'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n',
-            )  # pylint: disable=line-too-long
-        print(output)
+            tmp_output = rf'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n'  # pylint: disable=line-too-long
+        output += tmp_output
+    print(output)
