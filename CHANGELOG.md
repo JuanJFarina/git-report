@@ -2,6 +2,13 @@
 
 
 
+## v0.2.2 (2024-04-03)
+
+### Fix
+
+* fix(code): add raw format to git author info ([`df12977`](https://github.com/JuanJFarina/git-stats-report/commit/df12977cd2100887ac672f87645d0bf6bf8ff0d8))
+
+
 ## v0.2.1 (2024-04-03)
 
 ### Fix

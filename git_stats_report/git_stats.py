@@ -36,7 +36,7 @@ def get_total_commits(git_stats: GitStatsRawOutput) -> int:
     return sum(author["value"] for author in git_stats["authors"] if author["value"])
 
 
-def get_author_info(author: AuthorStats, since: datetime) -> str:
+def get_author_info(author: AuthorStats, since: datetime, *, raw_format: bool) -> str:
     author_name = author["label"]
     command = (
         f'git log --author="{author_name}" --numstat --since="{since}" --format=""'
@@ -55,4 +55,9 @@ def get_author_info(author: AuthorStats, since: datetime) -> str:
         lines_added += int(added) if added.isdigit() else 0
         lines_deleted += int(deleted) if deleted.isdigit() else 0
 
-    return f"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n"  # pylint: disable=line-too-long
+    output: str = f"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n"  # pylint: disable=line-too-long
+
+    if raw_format:
+        output = rf"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n"  # pylint: disable=line-too-long
+
+    return output
