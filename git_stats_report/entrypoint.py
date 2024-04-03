@@ -17,5 +17,5 @@ def run(strategy: Strategy, since: Optional[str]) -> None:
         author_info = get_author_info(author, since_datetime)
         percentage_of_total = (author["value"] * 100) / total_commits
         print(
-            f'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n'  # pylint: disable=line-too-long
+            f'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n',  # pylint: disable=line-too-long
         )

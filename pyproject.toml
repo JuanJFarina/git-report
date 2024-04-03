@@ -103,7 +103,7 @@ preview = true
 extend-select = [
     #   "D",   # pydocstyle
     # "FBT",   # flake8-boolean-trap
-    # "COM",   # flake8-commas
+    "COM",  # flake8-commas
     "E",    # pycodestyle
     "UP",   # pyupgrade
     "BLE",  # flake8-blind-except
@@ -138,9 +138,10 @@ extend-select = [
 
 ignore = [
     "ANN401", # Dynamically typed expressions
-    "E501", # Line too long
-    "T201", # `print` found
-    "ISC001",
+    "E501",   # Line too long
+    "T201",   # `print` found
+    "ISC001", # Keep to avoid issues with formatter
+    "COM812", # Keep to avoid issues with formatter
 ]
 
 [tool.ruff.format]
