@@ -21,6 +21,7 @@ def main(
         Optional[str],
         typer.Option("--since", "-s", help="Get git report since n days"),
     ] = None,
+    *,
     version: Annotated[
         bool,
         typer.Option("--version", "-V", help="Shows the version of git-stats-report"),
@@ -34,8 +35,10 @@ def main(
         typer.Option("-vv", help="Print DEBUG logging statements"),
     ] = False,
 ) -> None:
-    """Returns a report with all commits authors, amount of commits, percentage of total
-    , and also number of files changed, lines added and lines deleted"""
+    """
+    Returns a report with all commits authors, amount of commits, percentage of
+    total, and also number of files changed, lines added and lines deleted
+    """
 
     if version:
         typer.echo(__version__)
