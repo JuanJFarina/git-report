@@ -55,4 +55,4 @@ def get_author_info(author: AuthorStats, since: datetime) -> str:
         lines_added += int(added) if added.isdigit() else 0
         lines_deleted += int(deleted) if deleted.isdigit() else 0
 
-    return f"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n\n"  # pylint: disable=line-too-long
+    return f"\n* {files_changed} Files Changed, - {lines_deleted} Lines Deleted, + {lines_added} Lines Added\n"  # pylint: disable=line-too-long
