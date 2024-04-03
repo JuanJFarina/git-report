@@ -2,6 +2,13 @@
 
 
 
+## v0.1.4 (2024-04-03)
+
+### Fix
+
+* fix(config): bump patch version ([`1e44eca`](https://github.com/JuanJFarina/git-stats-report/commit/1e44eca6c675c17e2ddbd61d7205e88115f5b577))
+
+
 ## v0.1.3 (2024-04-03)
 
 ### Fix
