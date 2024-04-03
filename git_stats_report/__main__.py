@@ -18,21 +18,27 @@ def main(
         typer.Option("--strategy", "-st", help="Get git report since last merge"),
     ] = Strategy.FROM_DATE,
     since_n_days: Annotated[
-        Optional[str], typer.Option("--since", "-s", help="Get git report since n days")
+        Optional[str],
+        typer.Option("--since", "-s", help="Get git report since n days"),
     ] = None,
+    *,
     version: Annotated[
         bool,
         typer.Option("--version", "-V", help="Shows the version of git-stats-report"),
     ] = False,
     verbose: Annotated[
-        bool, typer.Option("--verbose", "-v", help="Print INFO logging statements")
+        bool,
+        typer.Option("--verbose", "-v", help="Print INFO logging statements"),
     ] = False,
     extra_verbose: Annotated[
-        bool, typer.Option("-vv", help="Print DEBUG logging statements")
+        bool,
+        typer.Option("-vv", help="Print DEBUG logging statements"),
     ] = False,
 ) -> None:
-    """Returns a report with all commits authors, amount of commits, percentage of total
-    , and also number of files changed, lines added and lines deleted"""
+    """
+    Returns a report with all commits authors, amount of commits, percentage of
+    total, and also number of files changed, lines added and lines deleted
+    """
 
     if version:
         typer.echo(__version__)

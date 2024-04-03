@@ -2,11 +2,28 @@
 
 
 
+## v0.1.3 (2024-04-03)
+
+### Fix
+
+* fix(release): bump patch version ([`51607f8`](https://github.com/JuanJFarina/git-stats-report/commit/51607f8445a9acc0ed8c138900e6fc442753746a))
+
+* fix(code): refactor git-stats ([`6dd0d0a`](https://github.com/JuanJFarina/git-stats-report/commit/6dd0d0adb1b463af74555e02aa6acd20268cf074))
+
+
 ## v0.1.2 (2024-04-03)
 
 ### Fix
 
+* fix(config): first run format then linter ([`12c778f`](https://github.com/JuanJFarina/git-stats-report/commit/12c778fa18ec89a11f7c108f4de07e403fa2490f))
+
+* fix(config): enable flake8 boolean trap through ruff ([`5a001c4`](https://github.com/JuanJFarina/git-stats-report/commit/5a001c472e0aba624d3ce43dea4ec5f5cce3c390))
+
 * fix(code): add error handling ([`bd78bce`](https://github.com/JuanJFarina/git-stats-report/commit/bd78bceb345afed6bbe241ad3219eb43c7cb2480))
+
+* fix(config): enable flake8-commas through ruff ([`c7dc954`](https://github.com/JuanJFarina/git-stats-report/commit/c7dc95484fb7ad70cc73d1d1e0369ae08226b194))
+
+* fix(config): use stricter mypy checks ([`9dd6b4b`](https://github.com/JuanJFarina/git-stats-report/commit/9dd6b4b2716718ff7c4309499496dbf8c0f29f6e))
 
 
 ## v0.1.1 (2024-04-02)
