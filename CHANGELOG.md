@@ -2,6 +2,13 @@
 
 
 
+## v0.2.0 (2024-04-03)
+
+### Feature
+
+* feat(code): add raw flag ([`e441c8d`](https://github.com/JuanJFarina/git-stats-report/commit/e441c8de9a693d4cc22fe0e2f8d7de83268be52b))
+
+
 ## v0.1.4 (2024-04-03)
 
 ### Fix
