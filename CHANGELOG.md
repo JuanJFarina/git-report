@@ -18,6 +18,13 @@
 
 * fix(config): use stricter mypy checks ([`9dd6b4b`](https://github.com/JuanJFarina/git-report/commit/9dd6b4b2716718ff7c4309499496dbf8c0f29f6e))
 
+## v0.1.2 (2024-04-03)
+
+### Fix
+
+* fix(code): add error handling ([`bd78bce`](https://github.com/JuanJFarina/git-stats-report/commit/bd78bceb345afed6bbe241ad3219eb43c7cb2480))
+
+
 
 ## v0.1.1 (2024-04-02)
 
