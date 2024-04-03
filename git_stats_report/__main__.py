@@ -22,6 +22,10 @@ def main(
         typer.Option("--since", "-s", help="Get git report since n days"),
     ] = None,
     *,
+    raw_format: Annotated[
+        bool,
+        typer.Option("--raw", "-r", help="Print raw output string with formatting"),
+    ] = False,
     version: Annotated[
         bool,
         typer.Option("--version", "-V", help="Shows the version of git-stats-report"),
@@ -54,7 +58,7 @@ def main(
         error_message = "--since is only allowed with --strategy FROM_DATE"
         raise ValueError(error_message)
 
-    run(strategy, since_n_days)
+    run(strategy, since_n_days, raw_format=raw_format)
 
     raise typer.Exit
 
