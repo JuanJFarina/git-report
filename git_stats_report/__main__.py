@@ -15,7 +15,7 @@ app = typer.Typer(add_completion=False)
 def main(
     strategy: Annotated[
         Strategy,
-        typer.Option("--strategy", "-s", help="Get git report since last merge"),
+        typer.Option("--strategy", "-st", help="Get git report since last merge"),
     ] = Strategy.FROM_DATE,
     since_n_days: Annotated[
         Optional[str], typer.Option("--since", "-s", help="Get git report since n days")

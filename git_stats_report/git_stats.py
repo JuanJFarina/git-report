@@ -19,12 +19,20 @@ class GitStatsRawOutput(TypedDict):
 
 
 def get_git_stats(since: datetime) -> GitStatsRawOutput:
-    command: str = f"npx git-stats --raw --authors --since {since}"
+    command: str = ""
+    try:
+        command = f"git-stats --raw --authors --since {since}"
+    except Exception:  # noqa
+        try:
+            command = f"npx git-stats --raw --authors --since {since}"
+        except Exception as exc:  # noqa
+            msg = "Either git-stats or node.js must be installed"
+            raise Exception(msg) from exc  # noqa
     return cast(GitStatsRawOutput, json.loads(run_command(command)))
 
 
 def get_total_commits(git_stats: GitStatsRawOutput) -> int:
-    return sum(author["value"] for author in git_stats["authors"])
+    return sum(author["value"] for author in git_stats["authors"] if author["value"])
 
 
 def get_author_info(author: AuthorStats, since: datetime) -> str:
