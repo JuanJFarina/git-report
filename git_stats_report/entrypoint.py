@@ -16,7 +16,7 @@ def run(strategy: Strategy, since: Optional[str], *, raw_format: bool) -> None:
     for author in git_stats["authors"]:
         if not author["value"]:
             continue
-        author_info = get_author_info(author, since_datetime)
+        author_info = get_author_info(author, since_datetime, raw_format=raw_format)
         percentage_of_total = (author["value"] * 100) / total_commits
         tmp_output = f'{author["label"]}: {author["value"]} commits ({percentage_of_total:.2f}% of total) {author_info}\n'  # pylint: disable=line-too-long
         if raw_format:
