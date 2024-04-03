@@ -9,9 +9,15 @@
 
 ### Fix
 
+
 * fix(cicd): unset persist credentials ([`5360968`](https://github.com/JuanJFarina/git-report/commit/536096831f50686b57160e2cd87660035ed6dc8e))
 
 * fix(release): bump patch version ([`51607f8`](https://github.com/JuanJFarina/git-report/commit/51607f8445a9acc0ed8c138900e6fc442753746a))
+
+* fix(cicd): unset persist credentials ([`5360968`](https://github.com/JuanJFarina/git-stats-report/commit/536096831f50686b57160e2cd87660035ed6dc8e))
+
+* fix(release): bump patch version ([`51607f8`](https://github.com/JuanJFarina/git-stats-report/commit/51607f8445a9acc0ed8c138900e6fc442753746a))
+
 
 * fix(code): refactor git-stats ([`6dd0d0a`](https://github.com/JuanJFarina/git-report/commit/6dd0d0adb1b463af74555e02aa6acd20268cf074))
 
