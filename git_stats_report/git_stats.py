@@ -102,6 +102,8 @@ def get_reports(
     reports: list[AuthorReport] = []
 
     for author in git_stats["authors"]:
+        if not author["value"]:
+            continue
         author_report = get_author_info(author, since, total_commits)
         reports.append(author_report)
     return reports
