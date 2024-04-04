@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import List, Optional
 
 from .git_stats import (
     AuthorReport,
@@ -18,9 +18,9 @@ def run(strategy: Strategy, since: Optional[str], *, raw_format: bool) -> None:
     git_stats: GitStatsRawOutput = get_git_stats(since_datetime)
     total_commits = get_total_commits(git_stats)
 
-    reports: list[AuthorReport] = get_reports(git_stats, since_datetime, total_commits)
+    reports: List[AuthorReport] = get_reports(git_stats, since_datetime, total_commits)
 
-    cleaned_reports: list[AuthorReport] = clean_reports(reports)
+    cleaned_reports: List[AuthorReport] = clean_reports(reports)
 
     output: str = ""
 

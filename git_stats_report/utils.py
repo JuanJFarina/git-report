@@ -1,4 +1,5 @@
 import subprocess
+from typing import List
 
 
 def run_command(command: str) -> str:
@@ -7,7 +8,7 @@ def run_command(command: str) -> str:
 
 def levenshtein_distance(A: str, B: str) -> int:
     N, M = len(A), len(B)
-    dp: list[list[int]] = [[0 for i in range(M + 1)] for j in range(N + 1)]
+    dp: List[List[int]] = [[0 for i in range(M + 1)] for j in range(N + 1)]
 
     for j in range(M + 1):
         dp[0][j] = j
