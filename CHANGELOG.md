@@ -2,6 +2,17 @@
 
 
 
+## v0.3.0 (2024-04-04)
+
+### Feature
+
+* feat(code): add levenshtein and other enhancements ([`4e351b5`](https://github.com/JuanJFarina/git-stats-report/commit/4e351b5477ae69214a2cdce25e2e4eb123e0cef0))
+
+### Fix
+
+* fix(code): change list to typing.list ([`f5999ee`](https://github.com/JuanJFarina/git-stats-report/commit/f5999eef6e91a88753e6ac7b718686653391a4e7))
+
+
 ## v0.2.2 (2024-04-03)
 
 ### Fix
