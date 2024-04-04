@@ -2,6 +2,13 @@
 
 
 
+## v0.3.0 (2024-04-04)
+
+### Feature
+
+* feat(code): add levenshtein and other enhancements ([`4e351b5`](https://github.com/JuanJFarina/git-stats-report/commit/4e351b5477ae69214a2cdce25e2e4eb123e0cef0))
+
+
 ## v0.2.2 (2024-04-03)
 
 ### Fix
