@@ -2,6 +2,13 @@
 
 
 
+## v0.3.1 (2024-04-04)
+
+### Fix
+
+* fix(code): guard against no contribution ([`ebd8f49`](https://github.com/JuanJFarina/git-stats-report/commit/ebd8f49fc7301d1356f49c9f5f1111b89f3e52a6))
+
+
 ## v0.3.0 (2024-04-04)
 
 ### Feature
