@@ -19,10 +19,30 @@ git-stats-report --help
 git-stats-report can be used in different ways, the most straightforward one is:
 
 ```shell
-git-stats-report
+git-stats-report -s "4"
 ```
 
-This will return statistics for each contributor since the last merge commit
+This will return statistics for each contributor since four days ago. The -s flag accepts
+any number greater than 0
+
+Other use of git-stats-report is with the -st flag, which allows to change the default
+behaviour, SINCE_DAYS, to FROM_LATEST_TAG:
+
+```shell
+git-stats-report -st "FROM_LATEST_TAG"
+```
+
+This will return statistics for each contributor since the last generated tag. Using the
+-st flag, the -s flag is not needed.
+
+A last option is the -r flag, which will return the raw string with linebreaks:
+
+```shell
+git-stats-report -r -s "4"
+```
+
+The output will be more suitable in some cases, like in CI/CD pipelines if you want to
+store the report in a variable and print it somewhere else.
 
 ## Installation
 
@@ -33,7 +53,7 @@ Recommended instalation for CICD is through `pipx` with a pinned version:
 
 ```shell
 pip install pipx==1.2.0
-pipx run git-stats-report==0.2.0
+pipx run git-stats-report==0.3.2
 ```
 
 That command will create a virtual environment just for git-stats-report and return the

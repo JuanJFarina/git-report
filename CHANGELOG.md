@@ -2,6 +2,13 @@
 
 
 
+## v0.3.2 (2024-04-04)
+
+### Fix
+
+* fix(readme): update readme ([`b940bb7`](https://github.com/JuanJFarina/git-stats-report/commit/b940bb7afad002046ae566fa3d9d452aae6beab2))
+
+
 ## v0.3.1 (2024-04-04)
 
 ### Fix
