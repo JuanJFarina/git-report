@@ -83,8 +83,10 @@ def get_author_info(
             continue
         added, deleted, _ = line.split("\t", 2)
         files_changed += 1
-        lines_added += int(added) if added.isdigit() else 0
-        lines_deleted += int(deleted) if deleted.isdigit() else 0
+        if added[-1] in NUM_CHARS:
+            lines_added += int(added)
+        if deleted[-1] in NUM_CHARS:
+            lines_deleted += int(deleted)
     percentage_of_total = (author["value"] * 100) / total_commits
     return AuthorReport(
         author_name=clean_name,
